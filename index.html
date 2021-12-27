@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- to link cdn -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Solar system</title>
+  </head>
+
+  <body>
+    <!-- star field start -->
+    <div id="container"></div>
+
+    <!-- star field end -->
+    <!-- heading start-->
+    <h1 class="heading">Solar System Explorer</h1>
+    <!-- heading end -->
+
+    <!-- bar start -->
+    <div class="outer">
+      <div class="inner"></div>
+    </div>
+    <!-- bar end -->
+    <main>
+      <!-- template start -->
+      <article class="card">
+        <div class="card__planet">
+          <div class="planet__atmosphere">
+            <div class="planet__surface"></div>
+          </div>
+        </div>
+        <div class="card__info">
+          <h2 class="info__title"></h2>
+          <div class="info__form">
+            <div class="info__item">
+              <label class="info__label">Tilt</label
+              ><span class="info__line"></span
+              ><i class="tilt__icon fas fa-long-arrow-alt-right"></i
+              ><span class="info__detail info__degree"></span>
+            </div>
+            <div class="info__item">
+              <label class="info__label">Day</label
+              ><span class="info__line"></span
+              ><span class="info__detail info__hours"></span>
+            </div>
+            <div class="info__item">
+              <label class="info__label">Year</label
+              ><span class="info__line"></span
+              ><span class="info__detail info__days"></span>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- template end -->
+
+      <!-- funfact template start -->
+      <div class="funfact">
+        <div class="funfact__card">
+          <div class="funfact__content">
+            <h1>Did you know ?</h1>
+            <h2 class="funfact__content__main">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex optio
+              temporibus animi dolorem officiis aperiam neque voluptatibus velit
+              laboriosam aut facilis delectus repellendus maiores expedita
+              doloremque, ea quisquam harum. In!
+            </h2>
+          </div>
+        </div>
+      </div>
+      <!-- funfact template end -->
+    </main>
+
+    <!-- instruction -->
+    <h2 class="instruction">
+      Use left arrow key and right arrow key to navigate !!
+    </h2>
+
+    <script src="script.js"></script>
+    <script src="starfield.js"></script>
+    <script>
+      var container = document.getElementById("container");
+      var starfield = new Starfield();
+      starfield.initialise(container);
+      starfield.start();
+    </script>
+  </body>
+</html>
